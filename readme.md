@@ -461,8 +461,6 @@ Sản phẩm cung cấp:
 
 ## 6. Yêu cầu về dữ liệu
 
-## 6. Yêu cầu về dữ liệu
-
 ### 6.1 Mô hình dữ liệu chính
 
 **order-service** (`order_db`)
