@@ -12,10 +12,17 @@ COPY ${MODULE}/src ${MODULE}/src
 
 RUN mvn -q -pl ${MODULE} -am clean package -DskipTests
 
+FROM eclipse-temurin:17-jre-alpine AS otel
+RUN wget -q -O /otel-agent.jar \
+  https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/latest/download/opentelemetry-javaagent.jar
+
 FROM eclipse-temurin:17-jre-alpine
 ARG MODULE
 WORKDIR /app
+
 COPY --from=build /app/${MODULE}/target/*.jar app.jar
+COPY --from=otel /otel-agent.jar otel-agent.jar
+
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
 
 # ENTRYPOINT ["java", \
