@@ -5,6 +5,7 @@ WORKDIR /app
 # Copy parent pom + tất cả module pom
 COPY pom.xml .
 COPY customer-service/pom.xml customer-service/
+COPY merchant-service/pom.xml merchant-service/
 
 # Copy source của module cần build
 COPY ${MODULE}/src ${MODULE}/src

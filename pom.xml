@@ -12,6 +12,7 @@
 
   <modules>
     <module>customer-service</module>
+    <module>merchant-service</module>
   </modules>
 
   <parent>

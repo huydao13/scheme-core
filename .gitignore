@@ -1,3 +1,5 @@
 /.idea/
 /customer-service/customer-service.iml
 /customer-service/target/
+/merchant-service/merchant-service.iml
+/merchant-service/target/
