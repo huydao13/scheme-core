@@ -13,6 +13,7 @@
   <modules>
     <module>customer-service</module>
     <module>merchant-service</module>
+    <module>pairing-service</module>
   </modules>
 
   <parent>
