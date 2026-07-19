@@ -78,6 +78,7 @@ public class PairingServiceImpl implements PairingService {
     Pairing pairing = findPairingById(id);
     return PairingResponse.builder()
         .id(pairing.getId())
+        .token(pairing.getToken())
         .merchantId(pairing.getMerchantId())
         .terminalId(pairing.getTerminalId())
         .customerId(pairing.getCustomerId())
